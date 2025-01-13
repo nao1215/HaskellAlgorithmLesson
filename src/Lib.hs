@@ -11,5 +11,4 @@ maxInList xs = Just (maximum xs)
 
 -- returns the sum of all elements in a list
 sumList :: [Int] -> Int
-sumList [] = 0
-sumList (x : xs) = x + sumList xs
+sumList = sum
