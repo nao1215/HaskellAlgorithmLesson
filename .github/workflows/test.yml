@@ -38,8 +38,5 @@ jobs:
           cabal update
           cabal build --only-dependencies --enable-tests --enable-benchmarks
 
-      - name: Build
-        run: make build
-
       - name: Test
         run: make test

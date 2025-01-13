@@ -1,6 +1,3 @@
-build: ## Build coreutils written in haskell
-	stack build
-
 clean: ## Clean project
 	stack clean
 	rm -rf .stack-work haddock dist-newstyle docs
@@ -11,7 +8,7 @@ doc:  ## Generate haddock document
 install: ## Install coreutils written in haskell
 	stack install
 
-test: build ## Unit test
+test: ## Unit test
 	stack test
 
 .DEFAULT_GOAL := help
