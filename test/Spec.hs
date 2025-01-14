@@ -1,7 +1,7 @@
 module Main (main) where
 
-import Lib (maxInList, sumList)
-import Test.Hspec
+import           Lib        (fibonacci, maxInList, sumList)
+import           Test.Hspec
 
 main :: IO ()
 main = hspec $ do
@@ -18,3 +18,19 @@ main = hspec $ do
 
     it "returns the sum of all elements for a non-empty list" $ do
       sumList ([1, 2, 3] :: [Int]) `shouldBe` 6
+
+  describe "fibonacci" $ do
+    it "returns 0 for negative input" $ do
+      fibonacci (-1) `shouldBe` 0
+
+    it "returns 0 for n = 0" $ do
+      fibonacci 0 `shouldBe` 0
+
+    it "returns 1 for n = 1" $ do
+      fibonacci 1 `shouldBe` 1
+
+    it "returns 1 for n = 2" $ do
+      fibonacci 2 `shouldBe` 1
+
+    it "returns 6765 for n = 20" $ do
+      fibonacci 20 `shouldBe` 6765
